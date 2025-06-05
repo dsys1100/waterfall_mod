@@ -24,14 +24,20 @@
 
 *========================================================================================================*/
 
-/* by dsys1100, from old project */
+/* by dsys1100, from other projects and my brain xd */
+@import "temp.css"; /* It is for tests and easy modification. Very useful for me */
 #alltabs-button { display: none !important; } /* Hide "All Tabs" button */
+#statuspanel { margin: 5px !important; } /* Floating statusbar from Zen mods */
+#statuspanel-label {
+border-radius: 3px !important;
+border: 1px solid var(--lwt-text-color) !important; }
 
 /*---+---+---+---+---+---+---+
  | V | I | S | U | A | L | S |
  +---+---+---+---+---+---+---*/
 
 :root {
+--tab-block-margin: 2px !important;
 --uc-urlbar-width: clamp(250px, 50vw, 600px); /* dynamic url bar width settings */
 --show-tab-close-button: none; /* if active always shows the tab close button */
 --show-tab-close-button-hover: -moz-inline-box; /* if active only shows the tab close button on hover*/
@@ -58,7 +64,6 @@
  | L | A | Y | O | U | T |
  +---+---+---+---+---+---*/
 
-:root { --tab-block-margin: 2px !important; }
 window,
 #main-window,
 #toolbar-menubar,
@@ -67,6 +72,8 @@ window,
 #navigator-toolbox,
 #sidebar-box,
 #urlbar * { box-shadow: none !important; } /* remove shadow on urlbar */
+#urlbar-searchmode-switcher { display: none !important; } /* remove searchEngine icon on urlbar */
+#navigator-toolbox { border-bottom: none !important; } /* remove border below whole nav */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) /* remove gap after pinned tabs */
     > #tabbrowser-arrowscrollbox
     > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
