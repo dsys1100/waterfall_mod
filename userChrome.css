@@ -26,11 +26,16 @@
 
 /* by dsys1100, from other projects and my brain xd */
 @import "temp.css"; /* It is for tests and easy modification. Very useful for me */
+#urlbar-searchmode-switcher { display: none !important; } /* Remove searchEngine icon on urlbar */
+#sidebar-button { display: none !important; } /* Remove sidebar button */
+#nav-bar #fxa-toolbar-menu-button { display: none !important; } /* Remove account icon */
+#nav-bar toolbarspring { display: none !important; } /* Remove spaces around urlbar */
 #alltabs-button { display: none !important; } /* Hide "All Tabs" button */
 #statuspanel { margin: 5px !important; } /* Floating statusbar from Zen mods */
 #statuspanel-label {
 border-radius: 3px !important;
 border: 1px solid var(--lwt-text-color) !important; }
+#tabbrowser-tabs {border-inline-start: none !important;} /* Hide border between Recents and tabs */
 
 /*---+---+---+---+---+---+---+
  | V | I | S | U | A | L | S |
