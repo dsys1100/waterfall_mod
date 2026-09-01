@@ -27,6 +27,7 @@
 /* by dsys1100, from other projects and my brain xd */
 @import "temp.css"; /* It is for tests and easy modification. Very useful for me */
 #urlbar-searchmode-switcher { display: none !important; } /* Remove searchEngine icon on urlbar */
+#urlbar .searchmode-switcher { display: none !important; }  /* Fix for new FF versions */
 #sidebar-button { display: none !important; } /* Remove sidebar button */
 #nav-bar #fxa-toolbar-menu-button { display: none !important; } /* Remove account icon */
 #nav-bar toolbarspring { display: none !important; } /* Remove spaces around urlbar */
@@ -36,6 +37,23 @@
 border-radius: 3px !important;
 border: 1px solid var(--lwt-text-color) !important; }
 #tabbrowser-tabs {border-inline-start: none !important;} /* Hide border between Recents and tabs */
+#context-navigation { /* List-style Context menu */
+  display: flex !important;
+  flex-direction: column !important; }
+#context-navigation > * {
+  justify-content: flex-start !important;
+  align-items: center !important;
+  min-height: 30px !important;
+  padding-left: 12px !important;
+  box-sizing: border-box !important;
+  font: menu !important;
+  text-align: left !important; }
+#context-navigation image,
+#context-navigation .toolbarbutton-icon { display: none !important; }
+#context-navigation > *::after {
+  content: attr(aria-label) !important;
+  margin: 0 !important;
+  font: inherit !important; }
 
 /*---+---+---+---+---+---+---+
  | V | I | S | U | A | L | S |
